@@ -9,6 +9,9 @@ function App() {
     <Router>
       <Routes>
             <Route path="/" element={<Header />} />
+            {/* <Route path="/about" element={<About />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/contact" element={<ContactMe />} /> */}
       </Routes>
     </Router>
   );
