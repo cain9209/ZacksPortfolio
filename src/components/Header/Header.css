@@ -1,0 +1,12 @@
+/* BasicExample.css */
+
+/* Ensure the Navbar is fixed to the top of the page */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1030; /* Ensure it stays on top of other elements */
+  }
+  
