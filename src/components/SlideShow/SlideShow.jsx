@@ -4,7 +4,7 @@ import './Slideshow.css'; // Include your CSS for styling
 const images = [
   './src/assets/react.svg',
   'image2.jpg',
-  'image3.jpg',
+  './src/assets/react.svg',
   // Add paths to your images here
 ];
 

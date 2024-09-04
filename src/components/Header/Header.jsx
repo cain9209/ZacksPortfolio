@@ -1,7 +1,8 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import '../Header/Global.css'
+import './Header.css'; // Assuming your CSS is in Header.css
+
 const Header = () => {
   return (
     <Navbar bg="light" expand="lg" className="header">
