@@ -1,0 +1,13 @@
+/* Ensuring the navbar stays at the top and doesn't cover the whole page */
+.header {
+    position: fixed; /* Stays at the top as you scroll */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Ensuring body content doesn't overlap with the fixed navbar */
+  body {
+    padding-top: 56px; /* Adjust this based on the navbar height */
+  }
+  
