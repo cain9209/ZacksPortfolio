@@ -1,18 +1,15 @@
 import React from "react";
-
-
+import { Link } from "react-router-dom";
+import Header from "../components/Header/Header";
+import Slideshow from "../components/SlideShow/SlideShow";
 
 const Home = () => {
-
     return (
-
-        <div>
-            <h1>Hello, Worlda</h1>
-            <p>HOME PAGE PLACE HOLDER AND PRACTICE</p>
+        <div className="Header">
+            <Header />
+            <Slideshow />
         </div>
-
-
-
     );
-
 };
+
+export default Home;

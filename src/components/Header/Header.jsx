@@ -1,34 +1,35 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import React from "react";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
-function BasicExample() {
+const Header = () => {
   return (
-    <>
-      <Navbar expand="lg" className="bg-body-tertiary fixed-top">
-        <Container fluid> 
-          <Navbar.Brand href="#home">Zack's Logo</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="about">About</Nav.Link>
-              <Nav.Link href="experience">Experience</Nav.Link>
-              <Nav.Link href="contact">Contact Me</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
-      {/* Main content */}
-      <div style={{ paddingTop: '70px' }}>
-        {/* Add your page content here */}
-        <h1>Welcome to the page!</h1>
-        <p>This is a sample content area.</p>
-      </div>
-    </>
+    <Navbar bg="light" expand="lg">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <LinkContainer to="/">
+            <Nav.Link>Home</Nav.Link>
+          </LinkContainer>
+          <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <LinkContainer to="/aboutme">
+              <NavDropdown.Item>About Me</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/experience">
+              <NavDropdown.Item>Experience</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/projects">
+              <NavDropdown.Item>Projects</NavDropdown.Item>
+            </LinkContainer>
+            <NavDropdown.Divider />
+            <LinkContainer to="/separated-link">
+              <NavDropdown.Item>Separated link</NavDropdown.Item>
+            </LinkContainer>
+          </NavDropdown>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
-}
+};
 
-export default BasicExample;
+export default Header;
